@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-float-slow: float-slow 3s ease-in-out infinite;
+  --animate-queue: queue 10s linear infinite;
+  --animate-hop: hop 3s ease-in-out infinite;
+
+  @keyframes float-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes queue {
+    0% { left: 100%; }
+    100% { left: -20%; }
+  }
+
+  @keyframes hop {
+    0%, 100% { transform: translateY(0) scale(1); opacity: 0.5; }
+    50% { transform: translateY(-20px) scale(1.2); opacity: 0.8; }
+  }
+}
+
+.shell-title {
+  color: #f0f9ff;
+  text-shadow: 
+    /* Stroke */
+    -2px -2px 0 #0284c7,
+     0   -2px 0 #0284c7,
+     2px -2px 0 #0284c7,
+     2px  0   0 #0284c7,
+     2px  2px 0 #0284c7,
+     0    2px 0 #0284c7,
+    -2px  2px 0 #0284c7,
+    -2px  0   0 #0284c7,
+    /* 3D Extrusion */
+     0px  3px 0 #0369a1,
+     0px  4px 0 #0369a1,
+     0px  5px 0 #0369a1,
+     0px  6px 0 #0369a1,
+    /* Drop Shadow */
+     0px  8px 10px rgba(0,0,0,0.3);
+}
+
+.shell-subtitle {
+  color: #f0f9ff;
+  text-shadow: 
+    /* Stroke */
+    -1px -1px 0 #0284c7,
+     0   -1px 0 #0284c7,
+     1px -1px 0 #0284c7,
+     1px  0   0 #0284c7,
+     1px  1px 0 #0284c7,
+     0    1px 0 #0284c7,
+    -1px  1px 0 #0284c7,
+    -1px  0   0 #0284c7,
+    /* 3D Extrusion */
+     0px  2px 0 #0369a1,
+     0px  3px 0 #0369a1,
+    /* Drop Shadow */
+     0px  5px 6px rgba(0,0,0,0.25);
+}
